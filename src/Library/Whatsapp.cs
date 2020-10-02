@@ -6,7 +6,7 @@ namespace Library
     public class Whatsapp : IMessageChannel
     {
         const string accountSid = "AC52493b284c82ba2c6b196ef82e412576";
-        const string authToken = "fe35a2702d8c2e83fbea2628d4cace09";
+        const string authToken = "TOKEN HERE";
         WhatsAppApi whatsAppApi;
 
         public Whatsapp()

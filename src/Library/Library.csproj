@@ -6,6 +6,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TwitterApi\src\Library\Library.csproj" />
-  </ItemGroup>
     <ProjectReference Include="..\WhatsappApi\src\Library\Library.csproj" />
+  </ItemGroup>
 </Project>

@@ -1,7 +1,8 @@
 ﻿using System;
 using Library;
+using System.Collections;
 
-namespace Program
+namespace Library
 {
     class Program
     {

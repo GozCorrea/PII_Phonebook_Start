@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    public class Phonebook
+    public class Phonebook //: IMessageChannel<T>
     {
         private List<Contact> persons;
 
@@ -13,6 +13,16 @@ namespace Library
         }
 
         public Contact Owner { get; }
+
+        public void AddContact(Contact contacto)
+        {
+            persons.Add(contacto);
+        }
+
+        public void RemoveContact(Contact contacto)
+        {
+            persons.Remove(contacto);
+        }
 
         public List<Contact> Search(string[] names)
         {
@@ -31,5 +41,10 @@ namespace Library
 
             return result;
         }
+
+       /*public void Send(T canal)
+        {
+            
+        }*/
     }
 }

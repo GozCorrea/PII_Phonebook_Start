@@ -18,6 +18,8 @@ namespace WhatsAppApiUCU
 
         public string Send(string to, string text)
         {
+            Console.WriteLine(to);
+            Console.WriteLine(text);
             if (!to.StartsWith("+598"))
             {
                 return "El número al que mandás el mensaje de comienzar con +598";

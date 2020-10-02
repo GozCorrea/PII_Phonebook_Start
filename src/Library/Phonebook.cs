@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Library
@@ -12,6 +13,10 @@ namespace Library
             this.persons = new List<Contact>();
         }
 
+        public void AddContact (Contact contact)
+        {
+            persons.Add (contact);
+        }
         public Contact Owner { get; }
 
         public List<Contact> Search(string[] names)
@@ -30,6 +35,16 @@ namespace Library
             }
 
             return result;
+        }
+
+        public void Send(string[] names, IMessageChannel channel, string text){
+            List<Contact> contacts = this.Search(names);
+            foreach (Contact contact in contacts)
+            {
+                Console.WriteLine(contact.Phone);
+                IMessage m = channel.CreateMessage(this.Owner, contact, text);
+                channel.Send(m);
+            }
         }
     }
 }

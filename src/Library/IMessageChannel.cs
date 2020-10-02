@@ -1,7 +1,10 @@
+using System;
+
 namespace Library
 {
-    public interface IMessageChannel <T>
+    public interface IMessageChannel
     {
-         void Send(T message);
+        void Send(IMessage message);
+        IMessage CreateMessage(Contact from, Contact to, string text);
     }
 }

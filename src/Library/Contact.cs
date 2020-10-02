@@ -1,4 +1,5 @@
-﻿namespace Library
+﻿using System;
+namespace Library
 {
     public class Contact
     {
@@ -6,7 +7,6 @@
         {
             this.Name = name;
         }
-
         public string Name { get; set; }
 
         public string Phone { get; set; }

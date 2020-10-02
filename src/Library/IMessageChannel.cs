@@ -1,7 +1,7 @@
 namespace Library
 {
-    public interface IMessageChannel
+    public interface IMessageChannel <T>
     {
-         void Send(Message message);
+         void Send(T message);
     }
 }

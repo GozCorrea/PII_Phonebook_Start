@@ -9,7 +9,7 @@ namespace Library
         static void Main(string[] args)
         {
             // Crear el contacto dueño
-            Contact dueño = new Contact("CLOP bot");
+
             // Crear la lista de contactos
 
             // Agregar contactos a la lista

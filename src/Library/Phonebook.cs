@@ -41,10 +41,13 @@ namespace Library
 
             return result;
         }
-
-       /*public void Send(T canal)
+       public void Send(string[] nombres, string text, IMessageChannel canal)
         {
-            
-        }*/
+            List<Contact> lista = Search(nombres);
+            foreach(Contact persona in lista)
+            {
+                canal.ArmarMensaje(text, this.Owner, persona);
+            }
+        }
     }
 }
